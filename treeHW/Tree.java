@@ -12,7 +12,7 @@ public class Tree {
         parent.children.add(newNode);
     }
 
-    public Nodes findNode(int value) {
+    public Nodes findNodeBFS(int value) {
         if (root == null)
             return null;
 
@@ -29,7 +29,28 @@ public class Tree {
         }
         return null;
     }
-//
+
+    public Nodes findNodeDFS(int value){
+        return findNodeDFS(root, value);
+    }
+
+    public Nodes findNodeDFS(Nodes node, int value) {
+        if (node == null) {
+            return null;
+        }
+        for (Nodes child : node.children) {
+            Nodes result = findNodeDFS(child, value);
+            if (result != null) {
+                return result;
+            }
+        }
+        if (node.value.equals(value)) {
+            return node;
+        }
+        return null;
+    }
+
+
 //    public static void printTree(Nodes node, int level) {
 //        if (node == null) return;
 //

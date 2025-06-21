@@ -21,9 +21,12 @@ public class Main {
         tree.addChild(tree.root.children.get(1),48);
         tree.addChild(tree.root.children.get(1),83);
 
-        Nodes findNode = tree.findNode(14);
-        tree.addChild(findNode,20);
+//        Nodes findNode = tree.findNodeBFS(14);
+//        tree.addChild(findNode,20);
 
-//        tree.printTree(tree.root, 1);
+        Nodes findNode = tree.findNodeDFS(14);
+        tree.addChild(findNode,33);
+//
+//            tree.printTree(tree.root, 1);
     }
 }
