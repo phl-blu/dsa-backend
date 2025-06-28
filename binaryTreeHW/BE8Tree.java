@@ -1,7 +1,5 @@
 package binaryTreeHW;
 
-import treeHW.Nodes;
-
 import java.util.ArrayList;
 
 public class BE8Tree {
