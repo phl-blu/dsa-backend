@@ -37,7 +37,7 @@ public class BE8Tree {
         return result;
     }
 
-    public int getHeight(BE8Node node, ArrayList<BE8Node> all) {
+    public int getHeight(BE8Node node, ArrayList<BE8Node> allNodes) {
         if (node == null) return 0;
 
         int maxDepth = 0;
